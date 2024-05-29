@@ -152,9 +152,9 @@ section.card h3 {
 /* Footer */
 footer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: var(--accent-color);
-    padding: 2rem 0 6rem 0;
+    padding: 2rem 10% 6rem 10%;
 }
 
 footer h2 {
