@@ -139,6 +139,16 @@ section.posters-large > .card p {
     font-size: 1.2rem;
 }
 
+.checkout-table .col1 {
+    width: 50%;
+}
+.checkout-table .col2 {
+    width: 40%;
+}
+.checkout-table .col3 {
+    width: 10%;
+}
+
 .checkout-table thead {
     background-color: rgba(163, 0, 0, 0.3);
 }
@@ -161,6 +171,10 @@ section.posters-large > .card p {
 .checkout-table tfoot {
     border-top: 2px solid rgba(255, 255, 255, 0.6);
     font-weight: 600;
+}
+
+.checkout-table tr:hover:not(thead > tr) {
+    background-color: var(--button-color);
 }
 
 /* Button style */
