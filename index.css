@@ -29,6 +29,7 @@ header {
     background-color: var(--brand-color);
     color: var(--dark-text);
     height: 50%;
+    margin-bottom: 4rem;
 }
 
 header > nav {
@@ -52,13 +53,15 @@ main {
     margin: auto;
 }
 
+/* Main > Checkout */
 main > section.checkout {
     display: flex;
     flex-direction: column;
 }
 
 main > section.checkout > h2 {
-    margin: 5rem 0 1.5rem 0;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
 }
 
 section.checkout > .checkout-cart {
@@ -76,21 +79,56 @@ article.card {
     flex-direction: column;
 }
 
-main .poster-image {
-    width: 100%;
-}
-
-article.card > div.card-info {
+article.card > div.card-info,
+article.card-small > div.card-info {
     display: flex;
     flex-direction: column;
     padding: 1rem;
     height: 100%;
 }
 
+article.card-small > div.card-info {
+    padding: 0;
+}
+
 article.card h3 {
     color: var(--dark-text);
     margin-bottom: .6rem;
     font-size: 1.3rem;
+}
+
+/* Main > index */
+main > section.posters-small {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 5%;
+}
+
+article.card-small {
+    width: 30%; 
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+article.card-small h3 {
+    font-size: 1.6rem;
+    margin: .6rem 0;
+}
+
+section.posters-large {
+    margin: 3rem 0 6rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+article .card-desc {
+    margin-bottom: 3rem;
+}
+
+section.posters-large > .card p {
+    color: var(--dark-text);
 }
 
 /* Table style */
@@ -129,7 +167,7 @@ article.card h3 {
 .btn {
     color: var(--light-text);
     background-color: var(--button-color);
-    padding: .5rem .7rem;
+    padding: .6rem .8rem;
     border: none;
     font-weight: bolder;
     font-size: .9rem;
@@ -147,9 +185,19 @@ article.card h3 {
     margin: 4rem 0;
 }
 
-.card .btn {
+.card .btn,
+.card-small .btn {
     font-size: .6rem;
     margin: auto auto 0 0;
+}
+
+.card-small .btn {
+    padding: .4rem .8rem;
+}
+
+section.posters-small .btn,
+section.posters-large .btn {
+    border-radius: 0.2rem;
 }
 
 /* Footer */
