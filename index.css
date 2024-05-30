@@ -45,6 +45,7 @@ header h1 {
 header .ninja-head {
     width: 10rem;
     height: auto;
+    display: block;
 }
 
 /* Main */
@@ -79,15 +80,19 @@ article.card {
     flex-direction: column;
 }
 
-article.card > div.card-info,
-article.card-small > div.card-info {
+figure .poster-image {
+    width: 100%;
+}
+
+article.card > section.card-info,
+article.card-small > section.card-info {
     display: flex;
     flex-direction: column;
     padding: 1rem;
     height: 100%;
 }
 
-article.card-small > div.card-info {
+article.card-small > section.card-info {
     padding: 0;
 }
 
@@ -142,9 +147,11 @@ section.posters-large > .card p {
 .checkout-table .col1 {
     width: 50%;
 }
+
 .checkout-table .col2 {
     width: 40%;
 }
+
 .checkout-table .col3 {
     width: 10%;
 }
@@ -231,6 +238,7 @@ footer h2 {
     display: block;
     text-decoration: none;
     color: var(--light-text);
+    padding: .2rem 0;
 }
 
 address {
@@ -239,4 +247,8 @@ address {
 
 address > ul {
     list-style: none;
+}
+
+address > ul li {
+    padding: .2rem 0;
 }
