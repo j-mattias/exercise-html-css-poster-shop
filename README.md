@@ -1,5 +1,5 @@
 > [!NOTE]
-> Flex version is in a separate branch
+> Flex version is in a separate branch. Made a more responsive grid version, without media queries.
 
 ![poster](./poster.png)
 
