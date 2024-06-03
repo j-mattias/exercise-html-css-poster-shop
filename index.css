@@ -26,9 +26,6 @@ body {
         "footer";
     
     gap: 4rem;
-    
-    /* REMOVE this later, just to see grid lines easier */
-    margin: 2rem;
 }
 
 /* Header */
@@ -42,19 +39,16 @@ header {
 
     background-color: var(--brand-color);
     color: var(--dark-text);
-    /* margin-bottom: 4rem; */
 }
 
 header > nav {
     padding: 1.5rem;
     justify-self: start;
-
+    cursor: pointer;
 }
 
 header h1 {
     font-size: 3.5rem;
-
-    /* padding: 4rem 0 5rem 0; */
 }
 
 header .ninja-head {
@@ -94,10 +88,26 @@ section.checkout > .checkout-cart {
 article.card {
     grid-column: span 1;
     background-color: var(--bg-card);
+
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    grid-template-areas:
+        "figure " 
+        "info   ";
+}
+
+article.card figure {
+    grid-area: figure;
 }
 
 figure .poster-image {
     width: 100%;
+}
+
+article.card .card-info {
+    grid-area: info;
+    display: grid;
+    grid-template-rows: auto;
 }
 
 article.card > section.card-info,
@@ -116,10 +126,31 @@ article.card h3 {
 }
 
 /* Main > index */
+section.posters {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4rem 1.5rem;
+    margin-block: 2rem;
+}
 
 article.card-small {
-    /* width: 30%;  */
-    margin-bottom: 5%;
+    grid-column: span 2;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    grid-template-areas:
+        "figure " 
+        "info   ";
+}
+
+article.card-small > .card-info {
+    grid-area: info;
+    display: grid;
+    grid-template-rows: auto;
+}
+
+/* Overwrite card style on checkout page */
+section.posters article.card {
+    grid-column: span 3;
 }
 
 article.card-small h3 {
@@ -127,15 +158,11 @@ article.card-small h3 {
     margin: .6rem 0;
 }
 
-section.posters-large {
-
-}
-
 article .card-desc {
     margin-bottom: 3rem;
 }
 
-section.posters-large > .card p {
+section.posters > .card p {
     color: var(--dark-text);
 }
 
@@ -209,6 +236,8 @@ section.posters-large > .card p {
 .btn.purchase {
     grid-column: 2;
     margin-top: 4rem;
+    width: clamp(50%, 60%, 100%);
+    justify-self: end;
 }
 
 .card .btn,
