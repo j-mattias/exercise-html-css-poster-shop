@@ -126,11 +126,18 @@ article.card h3 {
 }
 
 /* Main > index */
-section.posters {
+section.posters-small {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(clamp(200px, 15%, 20%), 1fr));
     gap: 4rem 1.5rem;
-    margin-block: 2rem;
+    margin-block: 2rem 6rem;
+}
+
+section.posters-large {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(200px, 424px, 60%), 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
 }
 
 article.card-small {
@@ -162,7 +169,7 @@ article .card-desc {
     margin-bottom: 3rem;
 }
 
-section.posters > .card p {
+section.posters-large .card p {
     color: var(--dark-text);
 }
 
