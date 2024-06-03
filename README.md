@@ -1,3 +1,6 @@
+> [!NOTE]
+> Grid version is in a separate branch
+
 ![poster](./poster.png)
 
 # Figma - Poster shop
