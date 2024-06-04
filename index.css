@@ -52,8 +52,6 @@ header h1 {
 }
 
 header .ninja-head {
-    /* width: 10rem; */
-    height: auto;
     display: block;
 }
 
@@ -86,10 +84,8 @@ section.checkout > .checkout-cart {
     margin-bottom: 3.5rem;
 }
 
-article.card {
-    grid-column: span 1;
-    background-color: var(--bg-card);
-
+/* General (Common) card styles */
+.card {
     display: grid;
     grid-template-rows: max-content 1fr;
     grid-template-areas:
@@ -109,27 +105,48 @@ article.card .card-info {
     grid-area: info;
     display: grid;
     grid-template-rows: auto;
-}
-
-article.card > section.card-info,
-article.card-small > section.card-info {
     padding: 1rem;
-}
-
-article.card-small > section.card-info {
-    padding: 0;
 }
 
 article.card h3 {
     color: var(--dark-text);
     margin-bottom: .6rem;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
+}
+
+article .card-desc {
+    margin-bottom: 3rem;
+}
+
+/* Card large styles */
+article.card.large {
+    grid-column: span 1;
+    background-color: var(--bg-card);
+}
+
+article.card .card-info {
+    color: var(--dark-text);
+}
+
+/* Card small styles */
+article.card.small {
+    grid-column: span 2;
+    background-color: var(--bg-color);
+}
+
+article.card.small .card-info {
+    padding: 0;
+    color: var(--light-text);
+}
+
+article.card.small h3 {
+    margin: .6rem 0;
+    color: var(--light-text);
 }
 
 /* Main > index */
 section.posters-small {
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(clamp(120px, 200px, 260px), 1fr)); */
     grid-template-columns: repeat(auto-fit, minmax(clamp(10rem, 10vw, 20rem), 1fr));
     gap: 4rem 1.5rem;
     margin-block: 2rem 6rem;
@@ -137,47 +154,9 @@ section.posters-small {
 
 section.posters-large {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(clamp(200px, 424px, 60%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(clamp(10rem, 38vw, 30rem), 1fr));
     gap: 1.5rem;
     margin-bottom: 4rem;
-    
-    /* ADWADW */
-    /* fit-content? */
-    /* grid-template-columns: repeat(auto-fit, minmax(min(18vw, 230px), 1fr)); */
-    grid-template-columns: repeat(auto-fit, minmax(clamp(10rem, 38vw, 30rem), 1fr));
-}
-
-article.card-small {
-    grid-column: span 2;
-    display: grid;
-    grid-template-rows: max-content 1fr;
-    grid-template-areas:
-        "figure " 
-        "info   ";
-}
-
-article.card-small > .card-info {
-    grid-area: info;
-    display: grid;
-    grid-template-rows: auto;
-}
-
-/* Overwrite card style on checkout page */
-section.posters article.card {
-    grid-column: span 3;
-}
-
-article.card-small h3 {
-    font-size: 1.6rem;
-    margin: .6rem 0;
-}
-
-article .card-desc {
-    margin-bottom: 3rem;
-}
-
-section.posters-large .card p {
-    color: var(--dark-text);
 }
 
 /* Table style */
