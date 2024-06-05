@@ -76,7 +76,6 @@ section.checkout > h2 {
 
 section.checkout > .checkout-cart {
     display: grid;
-    /* grid-template-columns: subgrid; */
     grid-template-columns: repeat(auto-fit, minmax(clamp(10rem, 38vw, 30rem), 1fr));
     grid-column: span 2;
     gap: 1rem;
@@ -87,24 +86,17 @@ section.checkout > .checkout-cart {
 /* General (Common) card styles */
 .card {
     display: grid;
-    grid-template-rows: max-content 1fr;
-    grid-template-areas:
-        "figure " 
-        "info   ";
-}
-
-article.card figure {
-    grid-area: figure;
-}
+    grid-template-rows: subgrid;
+    grid-row: span 2;
+    gap: 0.4rem;
+} 
 
 figure .poster-image {
     width: 100%;
 }
 
 article.card .card-info {
-    grid-area: info;
     display: grid;
-    grid-template-rows: auto;
     padding: 1rem;
 }
 
@@ -115,7 +107,7 @@ article.card h3 {
 }
 
 article .card-desc {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 /* Card large styles */
@@ -140,7 +132,6 @@ article.card.small .card-info {
 }
 
 article.card.small h3 {
-    margin: .6rem 0;
     color: var(--light-text);
 }
 
